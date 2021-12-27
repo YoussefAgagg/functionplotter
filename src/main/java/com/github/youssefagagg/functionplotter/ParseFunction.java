@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.DoubleUnaryOperator;
 /*
- *Refer to  https://stackoverflow.com/a/26227947/11286441
+ *Refer to the answer  https://stackoverflow.com/a/26227947/11286441 I implement this class and change it to suit my use case 
+ *
  *
  */
 public class ParseFunction {

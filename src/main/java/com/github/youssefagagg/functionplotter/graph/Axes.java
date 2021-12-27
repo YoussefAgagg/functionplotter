@@ -6,6 +6,7 @@ import javafx.geometry.Side;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.layout.Pane;
 /**
+ * re used this class from https://github.com/mooninvader/FunctionPlotter/blob/master/src/com/logicorp/functionPlotter/graph/Axes.java
  * 
  * X and Y coordinates 
  * 
