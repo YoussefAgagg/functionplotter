@@ -13,6 +13,7 @@ plot the graph for any function of x in a specific range
 - for square root use -> sqrt(x)
 - 2x -> 2*x
 - the app supports trigonometric and hyperbolic functions
+- use only round brackets ()
 - make sure to close all braces
 
 ## screenshots of the app
