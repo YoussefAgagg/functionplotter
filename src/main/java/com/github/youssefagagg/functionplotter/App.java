@@ -12,13 +12,13 @@ import java.io.IOException;
  */
 public class App extends Application {
 
-    private static Scene scene;
+ 
 
     @SuppressWarnings("exports")
 	@Override
     public void start(Stage stage) throws IOException {
         var fxmlLoader=loadFXML("functionPloterFXML2");
-        scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load());
         FunctionPloterController controller= fxmlLoader.getController();
         stage.setOnCloseRequest(e->{
         	controller.close();
