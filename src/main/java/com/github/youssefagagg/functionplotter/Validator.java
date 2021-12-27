@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class Validator {
 	 // private static final Pattern equationPattern=Pattern.compile("^(\\(*-?(((\\d+(\\.\\d+)?)|(\\.\\d+))|x)\\)*[-+*\\/^)])*(\\(*-?(((\\d+(\\.\\d+)?)|(\\.\\d+))|x)\\)*)$");
 	  //regex to validate numbers ex: 1.3, 123, 1.14, .12
-	  private static final Pattern numberPattern=Pattern.compile("(-?\\d+(\\.\\d+)?|\\.\\d+)");
+	  private static final Pattern numberPattern=Pattern.compile("-?((\\d+(\\.\\d+)?)|(\\.\\d+))");
 	  
 	  //regex to validate the roots values of solving equation that using NSolve method of symja libarary
 	  private static final Pattern rootPattern=Pattern.compile("x->(-?\\d+(\\.\\d+)?|\\.\\d+)");
