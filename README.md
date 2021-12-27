@@ -7,7 +7,7 @@ plot the graph for any function of x in a specific range
 
 
 ## how to use
-- for exponent use ->exp(x)
+- for e^x use ->exp(x)
 - for log base 10 use -> log(x)
 - for log base e use ln(x)
 - for square root use -> sqrt(x)
