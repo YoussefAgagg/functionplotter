@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.youssefagagg.functionplotter.FunctionPloterController">
+   <children>
+      <FlowPane alignment="CENTER" hgap="10.0" prefWidth="200.0" vgap="5.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="f(x)=" />
+                  <TextField fx:id="functionTextField" text="1/(x^2+4)" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="minX: " />
+                  <TextField fx:id="minXTextField" prefWidth="80.0" text="-10" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="maxX: " />
+                  <TextField fx:id="maxXTextField" prefWidth="80.0" text="10" />
+               </children>
+            </HBox>
+            <HBox />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </FlowPane>
+      <Button fx:id="plotButton" mnemonicParsing="false" onAction="#plotFunctionButtonClick" text="plot">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin></Button>
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background: rgb(35, 39, 50);" VBox.vgrow="ALWAYS">
+         <content>
+            <HBox fx:id="graphContainerHBox" alignment="CENTER" prefWidth="200.0" style="-fx-background-color: rgb(35, 39, 50);">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
