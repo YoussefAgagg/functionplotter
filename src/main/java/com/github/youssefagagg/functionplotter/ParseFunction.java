@@ -18,21 +18,21 @@ public class ParseFunction {
 
 	private static final Map<String,DoubleUnaryOperator> functions = new HashMap<>();
 	static {
-	    functions.put("sqrt", x -> Math.sqrt(x));
-	    functions.put("sin", x -> Math.sin(x));
-	    functions.put("cos", x -> Math.cos(x));
-	    functions.put("tan", x -> Math.tan(x));
-	    functions.put("sinh", x -> Math.sinh(x));
-	    functions.put("cosh", x -> Math.cosh(x));
-	    functions.put("tanh", x -> Math.tanh(x));
-	    functions.put("abs", x -> Math.abs(x));
-	    functions.put("log", x -> Math.log10(x));
-	    functions.put("ln", x -> Math.log(x));
-	    functions.put("exp", x -> Math.exp(x));
+	    functions.put("sqrt", Math::sqrt);
+	    functions.put("sin", Math::sin);
+	    functions.put("cos", Math::cos);
+	    functions.put("tan", Math::tan);
+	    functions.put("sinh", Math::sinh);
+	    functions.put("cosh", Math::cosh);
+	    functions.put("tanh", Math::tanh);
+	    functions.put("abs", Math::abs);
+	    functions.put("log", Math::log10);
+	    functions.put("ln", Math::log);
+	    functions.put("exp", Math::exp);
 
 	}
 	// the value of the x variable that will be evaluate to the expression
-	private double variableX_Value;
+	private double xVariableValue;
 	private String str;//the f(x) function that will be parse
 	private int pos = -1;
 	private int ch;
@@ -60,7 +60,7 @@ public class ParseFunction {
 	}
 	public  double  eval(double xValue) {
 		if (str==null)  throw new RuntimeException("there is no expression to evaluate ");
-		variableX_Value=xValue;
+		xVariableValue=xValue;
 		return expression.eval();
 	}
 
@@ -155,7 +155,7 @@ public class ParseFunction {
                   Expression arg = parseFactor();
                   e = () -> func.applyAsDouble(arg.eval());
               } else if(name.equals("x")) {
-                  e = () -> variableX_Value;
+                  e = () -> xVariableValue;
               }else {
             	  throw new RuntimeException("Unexpected: " + (char)ch);
               }

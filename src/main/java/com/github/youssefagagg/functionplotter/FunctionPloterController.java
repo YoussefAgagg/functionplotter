@@ -95,7 +95,7 @@ public class FunctionPloterController {
 	}
 
 	private boolean validateInputs() {
-		// TODO Auto-generated method stub
+		
 		return validateInputs.validMinMaxX(minXTextField.getText(),maxXTextField.getText())
 				&& validateInputs.validFunctionExpression(functionTextField.getText());
 	}
