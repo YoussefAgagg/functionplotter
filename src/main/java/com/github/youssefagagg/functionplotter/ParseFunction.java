@@ -142,7 +142,9 @@ public class ParseFunction {
 		   
 		if (eat('(')) { // parentheses
 			e = parseExpression();
-			eat(')');
+			if(!eat(')')) {
+				throw new RuntimeException("expected: ')' at index " + pos);
+			}
 		} else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
 			while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
 			double d=Double.parseDouble(str.substring(startPos, this.pos));
